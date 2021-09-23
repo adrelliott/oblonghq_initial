@@ -21,10 +21,10 @@ function data() {
     closeProfileMenu() {
       this.isProfileMenuOpen = false
     },
-    isPagesMenuOpen: false,
-    togglePagesMenu() {
-      this.isPagesMenuOpen = !this.isPagesMenuOpen
-    },
+    // isPagesMenuOpen: false,
+    // togglePagesMenu() {
+    //   this.isPagesMenuOpen = !this.isPagesMenuOpen
+    // },
     // Modal
     isModalOpen: false,
     trapCleanup: null,

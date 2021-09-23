@@ -17,12 +17,23 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/users', function () {
-    return view('admin.users');
-});
-Route::get('/modals', function () {
-    return view('admin.modals');
-});
+Route::get('/', function () { return view('windmill.todo'); });
+Route::get('/index', function () { return view('windmill.index'); });
+Route::get('/buttons', function () { return view('windmill.buttons'); });
+Route::get('/cards', function () { return view('windmill.cards'); });
+Route::get('/charts', function () { return view('windmill.charts'); });
+Route::get('/forms', function () { return view('windmill.forms'); });
+Route::get('/modals', function () { return view('windmill.modals'); });
+Route::get('/tables', function () { return view('windmill.tables'); });
+
+Route::get('/404', function () { return view('windmill.404'); });
+Route::get('/blank', function () { return view('windmill.blank'); });
+Route::get('/create-account', function () { return view('windmill.create-account'); });
+Route::get('/forgot-password', function () { return view('windmill.forgot-password'); });
+Route::get('/forgot-password', function () { return view('windmill.forgot-password'); });
+Route::get('/login', function () { return view('windmill.login'); });
+
+
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

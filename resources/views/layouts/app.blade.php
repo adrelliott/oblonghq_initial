@@ -23,9 +23,26 @@
 	</head>
 	<body class="font-sans antialiased">
 		<div :class="{ 'overflow-hidden': isSideMenuOpen}" class="flex h-screen bg-gray-50 dark:bg-gray-900">
+			<!-- Sidebars -->
+            <x-sidebar.desktop />
+            <x-sidebar.mobile />
+            <!-- /Sidebars -->
 
-			{{ $slot }}
+            <!-- Main Layout -->
+            <x-layout.main>
 
+                <!-- Top Nav -->
+                <x-nav.top-nav />
+                <!-- /Top Nav -->
+
+                <!-- Body -->
+                <x-layout.body>
+                    {{ $slot }}
+                </x-layout.body>
+                <!-- Body -->
+
+            </x-layout.main>
+            <!-- /Main Layout -->
 		</div>
 		@stack('scripts')
 		@stack('modals')
